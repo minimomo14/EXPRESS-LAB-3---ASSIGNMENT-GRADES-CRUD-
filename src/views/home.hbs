@@ -9,16 +9,30 @@
 <body>
     <h1>Assignments</h1>
     <table>
-        <h2>Assignments: {{assignments}}</h2>
-        <h2>Score: {{score}}</h2>
-        <h2>Total {{number}}</h2>
-        <h2>Completed </h2>
-        <h2>Actions <a href="deleted">Delete</a></h2>
+        <thead>
+            <tr>
+                <th>Assignment</th>
+                <th>Score</th>
+                <th>Total</th>
+                <th>Completed</th>
+                <th>Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each Assignment}}
+            <tr>
+                <td>{{assignment}}</td>
+                <td>{{score}}</td>
+                <td> <input type="checkbox" name="checkbox">completed</td>
+                <td> <a href="/delete">Delete</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
     </table>
-    </br>
+    <br>
     <h2>Overall Average: {{overallNumber}}%</h2>
-    <nav>
-        <a href="">Add an Assignment</a>
-    </nav>
+    <p>
+        <a href="/addAssignmentForm">Add an Assignment</a>
+    </p>
 </body>
 </html>
