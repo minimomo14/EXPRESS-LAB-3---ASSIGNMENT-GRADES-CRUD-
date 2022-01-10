@@ -5,23 +5,20 @@ import Assignment from "../models/assignments";
 // create a new Router object
 //const assignmentRoutes = express.Router();
 
-const routes = express.Router();
+const assignmentRoutes = express.Router();
 
-routes.get("/add", function(req,res){
-    res.render("add");
-});
+//routes.get("/add", function(req,res){
+//    res.render("add");
+//});
 
 //GET /api/assignments status(200)
-assignmentRoutes.get("/api/assignment", function(req,res){
-    res.status(200)
-    res.json(Assignment);
-});
+
 
 assignmentRoutes.get("/", function(req,res){
     res.render("home");
 });
 assignmentRoutes.get("/addAssignmentForm", function(req,res){
-    res.render("addAssignmentForm");
+    res.render("assignment-added");
 });
 //GET /api/summary
 
