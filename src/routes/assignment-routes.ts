@@ -17,8 +17,12 @@ const assignmentRoutes = express.Router();
 assignmentRoutes.get("/", function(req,res){
     res.render("home");
 });
-assignmentRoutes.get("/addAssignmentForm", function(req,res){
-    res.render("assignment-added");
+assignmentRoutes.get("/add", function(req,res){
+    res.render("add");
+});
+//POST
+assignmentRoutes.post("/add", function(req,res){
+    res.render("assignment-added",{});
 });
 //GET /api/summary
 
